@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BAE1F7A899474A2C4487507BEBB81EB1B0FF4AC2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BAE1F7A899474A2C4487507BEBB81EB1B0FF4AC2" : 0,
+    "023E304CC54F731FE93B66F291E616511F04A8DB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2E75CDFF-59C1-4230-8135-D3A036C4CBFC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BAE1F7A899474A2C4487507BEBB81EB1B0FF4AC2" : "ud421-ios-networking\/",
+    "023E304CC54F731FE93B66F291E616511F04A8DB" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ImageRequest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ImageRequest\/ImageRequest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mike-kane\/Udacity-Projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "023E304CC54F731FE93B66F291E616511F04A8DB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/www.github.com\/udacity\/ud421-ios-networking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BAE1F7A899474A2C4487507BEBB81EB1B0FF4AC2"
+    }
+  ]
+}
