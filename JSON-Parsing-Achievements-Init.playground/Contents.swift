@@ -22,6 +22,45 @@ var parsedAchievementsJSON = try! NSJSONSerialization.JSONObjectWithData(rawAchi
 
 func parseJSONAsDictionary(dictionary: NSDictionary) {
     /* Start playing with JSON here... */
+    
+    var matchmakingIDs = [Int]()
+    
+    guard let categoriesDictionary = dictionary["categories"] as? [NSDictionary] else {
+        print("cant access 'categories'")
+        return
+    }
+    
+    guard let achievementsDictionary = dictionary["achievements"] as? [NSDictionary] else {
+        print("cant access achievements")
+        return
+    }
+    
+    
+    var matchMakingIDs = [Int]()
+    
+    var pointTotal: Double = 0.0
+    
+    for category in categoriesDictionary {
+        
+        if let title = category["title"] as? String where title == "Matchmaking" {
+            
+            guard let children = category["children"] as? [NSDictionary] else {
+                print("can't access children key")
+                return
+            }
+            
+            for child in children {
+                
+                guard let id = child["categoryId"] as? Int else {
+                    print("can't find categoryId")
+                    return
+                }
+                
+                matchmakingIDs.append(id)
+            }
+        }
+    }
+    
 }
 
 parseJSONAsDictionary(parsedAchievementsJSON)
