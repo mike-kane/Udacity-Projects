@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /* Path for JSON files bundled with the Playground */
 var pathForAnimalsJSON = NSBundle.mainBundle().pathForResource("animals", ofType: "json")
@@ -22,6 +23,56 @@ var parsedAnimalsJSON = try! NSJSONSerialization.JSONObjectWithData(rawAnimalsJS
 
 func parseJSONAsDictionary(dictionary: NSDictionary) {
     /* Start playing with JSON here... */
+    
+    guard let photosDictionary = dictionary["photos"] as? NSDictionary else {
+        print("cannot find key 'photos'")
+        return
+    }
+    
+    guard let arrayOfDictionaries = photosDictionary["photo"] as? [[String:AnyObject]] else {
+        print("can't find key 'photo'")
+        return
+    }
+    
+    guard let totalPhotoCount = photosDictionary["total"] as? Int else {
+        print("cant find key 'total'")
+        return
+    }
+    
+    print(totalPhotoCount)
+    
+    for (index, photo) in arrayOfDictionaries.enumerate() {
+        
+        
+        guard let commentDictionary = photo["comment"] as? [String:AnyObject] else {
+            print("cant find key 'comment'")
+            return
+        }
+        
+        guard let content = commentDictionary["_content"] as? String else {
+            print("cant find key '_content'")
+            return
+        }
+        
+        if content.containsString("interrufftion") {
+            print(index)
+        }
+        
+        if let urlForPhoto = photo["url_m"] as? String where index == 2 {
+            let urlForPhoto = NSURL(string: urlForPhoto)
+            let imageData = NSData(contentsOfURL: urlForPhoto!)
+            let image = UIImage(data: imageData!)
+            
+            
+            
+            
+            
+        }
+        
+    }
+    
+    
+
 }
 
 parseJSONAsDictionary(parsedAnimalsJSON)
